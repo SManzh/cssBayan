@@ -19,14 +19,18 @@ h1 {
 div.accordion {
   color: #0000ff;
   font-weight: bold;
+  margin: 20px auto;
 }
 
 div.accordion p {
     text-align: left;
 }
   
-div.accordion i {
+div.accordion span {
     color: #000000;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
 }
 
 .subhead {
@@ -34,19 +38,57 @@ div.accordion i {
   justify-content: space-between;
 }
 
+.accordion div.pic {
+  max-width: 100%;
+  height: auto;
+  max-height: 0;
+  padding-left: auto;
+  padding-right: auto;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+div.accordion div:hover{
+    cursor: pointer;
+}
+
+div.accordion label:hover{
+    cursor: pointer;
+}
+
+.accordion label + input[type="radio"]:checked + div.pic {
+    max-height: 420px;
+}
+
+.accordion label:hover + input + div.pic {
+    max-height: 420px;
+}
+
+.accordion label + input + div.pic:hover {
+    max-height: 420px;
+}
+
+
+
 
 /*media queries--------------------*/
 /*820px--------------------*/
 @media (min-width: 820px) {
   body {
     font-size: 24px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
 /*1920px--------------------*/
 @media (min-width: 1920px) {
   body {
-    font-size: 24px;
+    font-size: 28px;
   }
   
   div.accordion:hover {
