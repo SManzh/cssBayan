@@ -48,30 +48,54 @@ div.accordion span {
   transition: max-height 0.5s;
 }
 
+div.pic img {
+  max-width: 100%;
+}
+
 input[type="radio"] {
-    display: none;
+  display: none;
 }
 
 div.accordion div:hover{
-    cursor: pointer;
+  cursor: pointer;
 }
 
 div.accordion label:hover{
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.accordion label + input[type="radio"]:checked + div.pic {
-    max-height: 420px;
+.accordion input[type="radio"]:checked + label + div.pic {
+  max-height: 420px;
 }
 
-.accordion label:hover + input + div.pic {
-    max-height: 420px;
+.accordion input + label:hover + div.pic {
+  max-height: 420px;
 }
 
-.accordion label + input + div.pic:hover {
-    max-height: 420px;
+.accordion input + label + div.pic:hover {
+  max-height: 420px;
 }
 
+.subhead span:hover {
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
+
+div.block:hover > label > span {
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
+
+.subhead span:hover {
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
+
+/*When clicked----------------------*/
+div.block > label > span {
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
 
 
 
