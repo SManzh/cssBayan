@@ -91,14 +91,27 @@ input[type="radio"]:checked + label > div > span {
     cursor: pointer;
   }
 
-  
   .accordion input + label:hover > div.pic {
     max-height: 20em;
+    transition: max-height 0.9s;
+  }
+
+  .accordion input + label:not(:hover) > div.pic {
+    transition: max-height 0.9s;
+  }
+
+  .accordion input + label:active > div.pic {
+    opacity: 50%;
+    transition: max-height 0.9s;
   }
   
   div.block:hover > label > div > span {
     transform: rotate(45deg);
-    transition: transform 0.5s;
+    transition: transform 0.9s;
+  }
+
+  div.block:not(:hover) > label > div > span {
+    transition: transform 0.9s;
   }
 } 
 
