@@ -77,7 +77,23 @@ input[type="radio"]:checked + label > div > span {
     padding-right: 15%;
   }
 
+  .accordion input + label:active > div.pic {
+    opacity: 50%;
+    transition: max-height 0.9s;
+  }
+} 
+
+/*1920px--------------------*/
+@media (min-width: 1920px) {
+  body {
+    font-size: 1.7em;
+  }
   
+  div.accordion:hover {
+    color: #000000;
+    cursor: pointer;
+  }
+
   .accordion:hover div.lbl{
     color:#000000;
   }
@@ -85,7 +101,6 @@ input[type="radio"]:checked + label > div > span {
   .accordion:hover span{
     color:#000000;
   }
-
   
   div.accordion div:hover{
     cursor: pointer;
@@ -100,11 +115,6 @@ input[type="radio"]:checked + label > div > span {
     transition: max-height 0.9s;
   }
 
-  .accordion input + label:active > div.pic {
-    opacity: 50%;
-    transition: max-height 0.9s;
-  }
-  
   div.block:hover > label > div > span {
     transform: rotate(45deg);
     transition: transform 0.9s;
@@ -112,17 +122,5 @@ input[type="radio"]:checked + label > div > span {
 
   div.block:not(:hover) > label > div > span {
     transition: transform 0.9s;
-  }
-} 
-
-/*1920px--------------------*/
-@media (min-width: 1920px) {
-  body {
-    font-size: 1.7em;
-  }
-  
-  div.accordion:hover {
-    color: #000000;
-    cursor: pointer;
   }
 }
